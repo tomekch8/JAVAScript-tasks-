@@ -1,0 +1,15 @@
+Implement a getTipsRating function that takes the tip amount and returns a textual rating depending on the amount left:
+
+if amount is greater than 50 euros, return excellent
+if more than 20, return great
+if more than 10, return good
+if something was given (>0), return poor
+otherwise return terrible
+
+
+function getTipsRating(amount) {
+if (amount>50)  {return ('excellent')}
+if (amount>20) {return ('great')}
+if (amount>10) {return ('good')}
+if (amount>0) {return ('poor')}
+else {return ('terrible')} }
