@@ -1,0 +1,10 @@
+Task is to create a getLargestExpressionResultOfThree function that takes two numbers, a and b. Calculate and return the largest possible result for the following three expressions:
+a + b
+a-b
+a*b
+
+function getLargestExpressionResultOfThree(a, b) {
+  let result=(a+b);
+  if ((a-b)>result) result=a-b;
+  if ((a*b)>result) result=a*b;
+  return result;
