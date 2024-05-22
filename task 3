@@ -1,0 +1,21 @@
+Let's say bank allows you to deposit into an interest-bearing savings account. For example, if you entrust them with PLN 10,000 for three years at an interest rate of 4 percentage points, you will receive:
+
+10000 + 4% = 10400 (10000 + 10000 * 0.04) - in the first year;
+10400 + 4% = 10816 (10400 + 10400 * 0.04) - in the second year;
+10816 + 4% = 11248.64 (10816 + 10816 * 0.04) - in the third year;
+11248.64 - 10000 = 1248.64 net profit.
+Create a calculateProfit function that takes three parameters:
+
+amount - the amount you would like to deposit at the start;
+percent - annual interest rate of the account;
+period - the number of years (during which the money will remain in the account).
+The function should calculate and return the net profit for the life of the deposit.
+
+function calculateProfit(amount, percent, period) {
+  let total = amount;
+  for (let i = 1; i <= period; i++) {
+    total += total * (percent / 100);
+  }
+  let profit= total - amount
+  return profit ;
+}
