@@ -1,0 +1,17 @@
+We have created a program that collects statistics webinars, and recently we decided to improve it. Namely: in its latest version, the program sends data to the server in the form of the sequence 111001010111011, where 1 symbolizes students who have understood the topic, and 0 represents students who need a repetition. With the next update, we would like the program to automatically count the number of students in category 1 and those in category 0.
+Prepare a getSuccessRate function that accepts a statistic string and returns the percentage of students who understood the material. If the output string is empty, return the number 0.
+
+function getSuccessRate(statistic) { 
+  if (statistic.length === 0) { return 0; } 
+let pass = 0;
+let again = 0;
+for (let digit of statistic) {
+    if (digit === '1') {
+        pass++;
+    }
+    if (digit === '0') {
+        again++;
+    }
+}
+return (pass / (pass + again)) * 100 
+}
