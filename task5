@@ -1,0 +1,11 @@
+Create a makeAbbr function that takes the string words and returns an uppercase abbreviation.
+
+The string words contains one or more words, separated by a single space.
+
+function makeAbbr(words){
+  let short = words[0]; 
+ for (let i = 0; i < words.length; i++) 
+ { if (words[i] === " ")
+  { short += words[i + 1]; } 
+  } short = short.toUpperCase();
+   return short; }
