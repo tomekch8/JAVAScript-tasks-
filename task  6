@@ -1,0 +1,16 @@
+Your task is to detect each palindrome - an expression that sounds identical in both reading directions, in the indicated lines. Achieve this goal using the isWerewolf method.
+isWerewolf('rotator'); // true ('rotator' -> 'rotator')
+isWerewolf('home'); // false ('home' -> 'emoh')
+isWerewolf('eva, can i see bees in a cave'); // true
+
+function isWerewolf(target) { 
+  let direct =""; 
+  let reversed="";
+for(let i=0; i<target.length; i++) {
+let character = target[i]; 
+if (character.match(/[a-z]/i))
+ { direct += character; 
+ reversed = character + reversed; } }
+if (direct.toLowerCase() === reversed.toLowerCase()) {
+   return true; } 
+   else { return false; } }
