@@ -1,0 +1,21 @@
+// Write a getLocation function that takes two parameters:
+//coordinates - matrix of initial coordinates in two axes [x, y];
+//commands - matrix with command history ['command1', 'command2', 'command3' ...].
+//The function should return a matrix with the final coordinates ([x, y]) where the robot should be located after performing movements in accordance with the commands instructions.
+//code example: getLocation([0, 0], ['forward', 'right']); // [1, 1]
+
+function getLocation(coordinates, commands) {
+
+let endPosition =[]
+let x = coordinates[0]
+let y = coordinates[1]
+
+for (let i=0; i<commands.length; i++)
+{
+if (commands[i]==='forward') {y= y+1;}
+if (commands[i]==='back') {y= y-1;}
+if (commands[i]==='right') {x= x+1;}
+if (commands[i]==='left') {x= x-1;}
+
+}
+endPosition =[x, y];
