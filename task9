@@ -1,0 +1,27 @@
+Create a getPlan function that takes three parameters:
+
+startProduction - planned production scale (number) of robots per month;
+numberOfMonths - the number of months during which we plan to increase production;
+percent - expected month-to-month production growth expressed as a percentage.
+The function should return an array with targets for a specific numberOfMonth.
+
+To understand how the function is supposed to work, let's use an example. Let's assume we have startProduction = 200, numberOfMonths = 3, and percent = 50:
+
+the first goal is to produce 200 + 50% = 300 robots;
+the second goal is to produce 300 + 50% = 450 robots;
+and the third is the production of 450 + 50% = 675 robots.
+As a result, we will get an array [300, 450, 675].
+
+function getPlan(startProduction, numberOfMonths, percent) {
+  let goalsArray=[]
+  let currentProduction=startProduction
+  let m=0
+for (let i=0; i<numberOfMonths ; i++ ) {
+ m =Math.floor(currentProduction+currentProduction*percent/100);
+
+goalsArray.push(m)
+
+currentProduction=m ;}
+
+return goalsArray;
+}
