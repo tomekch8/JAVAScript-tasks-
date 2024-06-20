@@ -1,0 +1,14 @@
+Create an isJumping function that accepts the string number and returns 'JUMPING' - if each digit in number differs from the neighboring digit by 1, or 'NOT JUMPING' - if they do not meet this condition.
+
+function isJumping(n) {
+  const str = String(n);
+
+  for (let i = 1; i < str.length; i++) {
+    const diff = str[i] - str[i - 1];
+
+    if (diff !== 1 && diff !== -1) {
+      return 'NOT JUMPING';    }
+  }
+
+  return 'JUMPING';
+}
