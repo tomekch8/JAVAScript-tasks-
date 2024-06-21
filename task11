@@ -1,0 +1,12 @@
+Create a function isSpecialNumber that takes a positive number n and determines whether it is a special number.
+A number is considered special if none of its digits is greater than 5 (i.e. 0, 1, 2, 3, 4 or 5).
+The function should return the string 'Special!!' if the number has special status, or 'NOT!!' - if we are dealing with a non-special number.
+
+function isSpecialNumber(n) {
+ 
+  let N = n.toString()
+  for(let i=0; i< N.length; i++)
+  {if (N[i]>5 || N[i]<0)
+ 
+{return "NOT!!";}}
+return"Special!!";}
