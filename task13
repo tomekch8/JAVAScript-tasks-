@@ -1,0 +1,15 @@
+Create a combineArrays function that:
+
+Gets two arrays of numbers of equal size,* first and second.
+Returns a matrix of numbers where each element is the sum of first[i] and second[i].
+Example
+combineArrays([1, 2, 5], [3, 6, 1]); // 1 + 3 = 4; 2 + 6 = 8; 5 + 1 = 6; so: [4, 8, 6]
+
+function combineArrays(first, second) {
+
+let combine =[];
+for (let i=0; i< first.length; i++)
+combine.push(first[i]+second[i])
+
+ return combine
+}
