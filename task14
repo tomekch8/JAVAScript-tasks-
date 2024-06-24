@@ -1,0 +1,11 @@
+Create a getArraysSum function that:
+It accepts two matrices with numbers; both matrices should contain the same number of elements.
+Returns the sum of their elements.
+
+function getArraysSum(arr1, arr2) {
+  let arraySum =0;
+  for (let i = 0; i < arr1.length; i++) {
+    arraySum+=arr1[i] + arr2[i];
+  }
+  return arraySum;
+}
