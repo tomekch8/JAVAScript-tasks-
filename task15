@@ -1,0 +1,29 @@
+In this activity, we will remind ourselves how to work with numbers.
+
+Create a checkNumber function that takes integers and checks whether they meet three criteria:
+
+Is this a positive number?
+Is it an even number?
+Can it be divided by 10?
+The function should return an array with results in the form of boolean values: true or false.
+
+Example
+checkNumber(3); // [true, false, false]
+
+function checkNumber(n) {
+  let arr = [];
+if (n > 0) {
+  arr.push(true);}
+else {
+  arr.push(false);}
+if (n%2===0)
+{
+  arr.push(true);}
+else { 
+  arr.push(false);}
+if (n%10===0)
+{
+  arr.push(true);}
+else {arr.push(false);}
+return arr;
+}
