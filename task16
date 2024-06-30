@@ -1,0 +1,16 @@
+Let's "cut" the string into smaller parts
+
+Create a splitString function that takes a string str, splits it into smaller elements of two characters each, and then returns an array of the resulting twos.
+
+Note! If the string contains an odd number of characters, add _ after the last character.
+
+function splitString(str) {
+  let result = [ ];
+  
+  if (str.length%2!==0)
+  {str=str + '_'}
+
+  for (let i = 0; i < str.length; i+=2) {
+    result.push(str.slice(i, i+2)); }
+  return result;
+}
